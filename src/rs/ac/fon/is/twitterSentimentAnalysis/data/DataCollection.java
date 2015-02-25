@@ -1,10 +1,7 @@
-package data;
+package rs.ac.fon.is.twitterSentimentAnalysis.data;
 
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+
+import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -15,43 +12,77 @@ import twitter4j.StatusDeletionNotice;
 import twitter4j.StatusListener;
 import twitter4j.TwitterStream;
 
-public class Listener implements StatusListener{
-	ArrayList<Status> trainingArray;
-	TwitterStream twitterStream;
+public class DataCollection implements StatusListener{
 	
-	public Listener(TwitterStream twitterStream){
+	private ArrayList<Status> trainingArray;
+	private TwitterStream twitterStream;
+	
+	
+	
+	public DataCollection(TwitterStream twitterStream){
 		trainingArray = new ArrayList<Status>();
 		this.twitterStream = twitterStream;
 	}
+	
+	
+
+	public ArrayList<Status> getTrainingArray() {
+		return trainingArray;
+	}
+
+
+
+	public void setTrainingArray(ArrayList<Status> trainingArray) {
+		this.trainingArray = trainingArray;
+	}
+
+
+
+	public TwitterStream getTwitterStream() {
+		return twitterStream;
+	}
+
+
+
+	public void setTwitterStream(TwitterStream twitterStream) {
+		this.twitterStream = twitterStream;
+	}
+
+
 
 	public void onException(Exception arg0) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	public void onDeletionNotice(StatusDeletionNotice arg0) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	public void onScrubGeo(long arg0, long arg1) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	public void onStallWarning(StallWarning arg0) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	public void onStatus(Status status){
-		//System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText()+"-Language:"+status.getLang());
+		
 		if((trainingArray.size()<100) && (status.getLang().equals("sr"))){
 			trainingArray.add(status);
-			//System.out.println("dodat");
+			
 		}
 		if (trainingArray.size()==100){
-			serialize();
+			DataSerialization ds = new DataSerialization();
+			try {
+				ds.serializeStatusesToJSON(trainingArray);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 			twitterStream.shutdown();
 		}
 			
@@ -68,9 +99,9 @@ public class Listener implements StatusListener{
 			out.println("@" + trainingArray.get(i).getUser().getScreenName() + " - " + trainingArray.get(i).getText());
 		}
 	}
-	public void serialize(){
+	/*public void serialize(){
         try{
-            ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("tweets.out")));
+            ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("tweets.json")));
             for(int i=0;i<trainingArray.size();i++)
                 out.writeObject(trainingArray.get(i));
                 out.close();
@@ -96,7 +127,7 @@ public class Listener implements StatusListener{
     }
 	
 	
-	
+	*/
 	
 	
 	
