@@ -18,6 +18,7 @@ public class DataSerialization {
 		for (int i=0; i<tweets.size(); i++){
 			out.println(gson.toJson(tweets.get(i)));
 		}
+		out.close();
 		
 	}
 
