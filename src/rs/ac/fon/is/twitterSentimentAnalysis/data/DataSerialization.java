@@ -11,15 +11,30 @@ import twitter4j.Status;
 
 
 public class DataSerialization {
+	private PrintWriter out;
 	
-	public void serializeStatusesToJSON(ArrayList<Status> tweets) throws FileNotFoundException{
-		PrintWriter out = new PrintWriter("tweets.json");
+	public DataSerialization(){
+		try {
+			out = new PrintWriter("tweets_sr.json");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void serializeStatusesToJSON(ArrayList<Status> tweets){
 		Gson gson = new Gson();
 		for (int i=0; i<tweets.size(); i++){
 			out.println(gson.toJson(tweets.get(i)));
+			
+			
 		}
-		out.close();
 		
+		
+		
+		
+	}
+	public void flush(){
+		out.flush();
 	}
 
 }
