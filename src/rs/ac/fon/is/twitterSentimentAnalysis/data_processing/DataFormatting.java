@@ -27,14 +27,14 @@ public class DataFormatting {
 
 
 
-	public void stripEmoticons(){
+	private void stripEmoticons(){
 		for(Status s : statuses){
 			String noEmoticons = s.getText().replaceAll("[:;=B](')*(-)*[)(P3DSO*sp]+",""); 
 			tweets.add(noEmoticons);
 		}
 	}
 	
-	public void stripUsernames(){
+	private void stripUsernames(){
 		for(int i=0; i<tweets.size();i++){
 			String noUsernames=tweets.get(i).replaceAll("@\\w*", "USERNAME ");
 			tweets.remove(i);
@@ -42,7 +42,7 @@ public class DataFormatting {
 		}
 	}
 	
-	public void stripURLs(){
+	private void stripURLs(){
 		for(int i=0; i<tweets.size();i++){
 			String noURLs=tweets.get(i).replaceAll("http(s)*://t.co/\\w*", "URL");
 			tweets.remove(i);
@@ -50,7 +50,7 @@ public class DataFormatting {
 		}
 	}
 	
-	public void stripRepeatedLetters(){
+	private void stripRepeatedLetters(){
 		for(int j=0; j<tweets.size();j++){
 			String noRepeatedLetters = tweets.get(j).replaceAll("([a-zA-Zа-шА-Ш])\\1+","$1$1");
 			tweets.remove(j);
