@@ -40,7 +40,7 @@ public class TrainingData {
 				Instance instance = new Instance(2);
 				instance.setDataset(data);
 				instance.setValue(textAttr, tweets.get(i));
-				if(i<100)
+				if(i<1000)
 					instance.setValue(sentimentAttr, "positive");
 				else
 					instance.setValue(sentimentAttr, "negative");

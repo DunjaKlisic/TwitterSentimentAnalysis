@@ -34,7 +34,7 @@ public class DataSerialization {
 
 	public void serializeStatusesToJSON(ArrayList<Status> tweets,String fileName){
 		try {
-			out = new PrintWriter(new BufferedWriter((new OutputStreamWriter(new FileOutputStream(fileName, true), "UTF-8"))));
+			out = new PrintWriter(new BufferedWriter((new FileWriter(fileName, true))));
 
 			
 		} catch (FileNotFoundException e) {
@@ -48,6 +48,8 @@ public class DataSerialization {
 			
 			
 		}
+		flush();
+		System.out.println("Radi ovo?");
 		out.close();
 		
 	}
