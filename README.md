@@ -1,4 +1,5 @@
 # Twitter Sentiment Analysis
+
 ##O projektu
 
 Twitter je društvena mreža koja korisnicima omogućava da objavljuju i čitaju kratke poruke koji se nazivaju tweet-ovi i koji izražavaju njihovo mišljenje o različitim aspektima života. Osnovna ideja ovog projekta je kreiranje aplikacije sposobne da, na osnovu prikupljene kolekcije statusa, odnosno tweet-ova, nauči da prepozna razliku između statusa sa pozitivnim i negativnim osećanjem i na nakon toga uspešno klasifikuje tweet-ove koje joj korisnik zadaje. Trening, odnosno učenje aplikacije se postiže pomoću nenadgledanih metoda mašinskog učenja.
