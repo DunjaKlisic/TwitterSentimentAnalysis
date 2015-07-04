@@ -45,7 +45,13 @@ U narednoj tabeli su dati emotikoni koje twitter mapira na :) i emotikoni koje t
 |	=)			|					|
 
 
-
+| Mapirani na :)  | Mapirani na :( |
+| ------------- | ------------- |
+| :)  | :(  |
+| :-)  | :-(  |
+| : )  | : (  |
+| :D  |   |
+| =)  |   |
 
 Kako postoji ograničenje na broj statusa koje klijentska aplikacija može da dobije u jednom zahtevu (najviše 100), neophodno je iteracija kroz rezultat pretrage.
 
