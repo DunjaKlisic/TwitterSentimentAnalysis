@@ -25,17 +25,25 @@ Za prikupljanje tweet-ova upotrebili smo Twitter Search API, deo Twitter-ovog RE
 Želimo da postavimo upit koji će eliminisati tweet-ove koje predstavljaju retweet-ove (status koji je određeni korisnik preuzeo od nekog drugog korisnika), a za kriterijum pretrage prvo postavljamo emotikon :) kako bismo dobili statuse koji izražavaju pozitivna osećanja a zatim emotikon :(, za dobijanje tweet-ova koje ćemo kasnije označiti kao negativne. Dobijeni upiti su:
 
 :) + exclude:retweets
+
 :( + exclude:retweets
 
 U narednoj tabeli su dati emotikoni koje twitter mapira na :) i emotikoni koje twitter mapira na :( :
 
 |Mapirani na :) |	Mapirani na :(	|
+
 |-----------------------------------|
+
 |	:)			|	:(				|
+
 |	:-)			|	:-(				|
+
 |	: )			|	: (				|
-|	:D			|					|			
+
+|	:D			|					|
+			
 |	=)			|					|
+
 
 
 
@@ -58,6 +66,7 @@ Nakon toga, uklanjamo emotikone jer bi kreirali šum prilikom treniranja klasifi
 Sledeći korak u obradi teksta statusa je dodavanje tokena USERNAME i URL koji predstavljaju korisnička imena i linkove. Regularni izrazi koje koristimo za pronalaženje korisničkih imena i linkova su, respektivno:
 
 @\\w*
+
 http(s)*://t.co/\\w*
 
 Poslednja stvar u procesiranju teksta je pronalaženje reči u kojima postoje slova koja se ponavljaju više od dva puta zaredom i njihova zamena sa dva pojavljivanja tog slova. Ovo postižemo sledećim izrazom:
@@ -311,17 +320,27 @@ Nakon treniranja klasifikatora sa različitim metodama mašinskog učenja, uoča
 
 === Confusion Matrix ===
 
+
 |   a   b |	<-- classified as	|
+
 |------------------------------ |
+
 | 745 255 |   a = positive		|
+
 | 535 465 |   b = negative		|
+
 
 === Confusion Matrix ===
 
+
 |   a   b |  <-- classified as	|
+
 |-------------------------------|
+
 | 178 822 |   a = positive		|
+
 |  99 901 |   b = negative		|
+
 
 U prvom slučaju, najveća greška se javlja kod 535 negativnih tweet-ova koji su klasifikovani kao pozitivni nasuprot 255 pogrešno klasifikovanih pozitivnih statusa. U drugom slučaju, čak 822 pozitivna statusa su klasifikovani kao negativni.
 
