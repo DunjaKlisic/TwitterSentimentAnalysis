@@ -40,7 +40,7 @@ U narednoj tabeli su dati emotikoni koje twitter mapira na :) i emotikoni koje t
 | :D  |   |
 | =)  |   |
 
-Kako postoji ograničenje na broj statusa koje klijentska aplikacija može da dobije u jednom zahtevu (najviše 100), neophodno je iteracija kroz rezultat pretrage.
+Kako postoji ograničenje na broj statusa koje klijentska aplikacija može da dobije u jednom zahtevu (najviše 100), neophodna je iteracija kroz rezultat pretrage.
 
 Da se u rezultatu ne bi javljali duplikati, koristi se parametar **max_id**. U prvom zahtevu zadaje se samo broj statusa, a za sledeće se beleži najmanji ID od svih primljenih tweet-ova. Taj ID se umanjuje za jedan i prosleđuje kao vrednost za **max_id** narednog zahteva. Tako se obezbeđuje da on vraća samo statuse sa ID-ijem koji je manji ili jednak vrednosti **max_id** parametra.
 
