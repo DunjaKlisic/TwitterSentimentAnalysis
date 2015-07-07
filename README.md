@@ -22,7 +22,7 @@ Tok izvršenja aplikacije se sastoji iz sledećih koraka:
 
 Za prikupljanje tweet-ova korišćen je [Twitter Search API] (https://dev.twitter.com/rest/public/search), deo Twitter-ovog **REST API**-ja. On za zadati upit sa definisanim parametrima vraća statuse koji odgovaraju tim parametrima. Pre korišćenja ovog API-ja neophodno je registrovati aplikaciju na Twitter-u.
  
-Potrebano je napisati upit koji će eliminisati tweet-ove koje predstavljaju retweet-ove (status koji je određeni korisnik preuzeo od nekog drugog korisnika), a za kriterijum pretrage prvo je postavljen emotikon :) za dobijanje statusa koji izražavaju pozitivna osećanja a zatim emotikon :(, za dobijanje tweet-ova koji će kasnije biti označeni kao negativni. Dobijeni upiti su:
+Potrebno je napisati upit koji će eliminisati tweet-ove koje predstavljaju retweet-ove (status koji je određeni korisnik preuzeo od nekog drugog korisnika), a za kriterijum pretrage prvo je postavljen emotikon :) za dobijanje statusa koji izražavaju pozitivna osećanja a zatim emotikon :(, za dobijanje tweet-ova koji će kasnije biti označeni kao negativni. Dobijeni upiti su:
 ```
 :) + exclude:retweets
 
