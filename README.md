@@ -2,7 +2,7 @@
 
 ##O projektu
 
-[Twitter] (https://twitter.com/) je društvena mreža koja korisnicima omogućava da objavljuju i čitaju kratke poruke koji se nazivaju tweet-ovi i koji izražavaju njihovo mišljenje o različitim aspektima života. Osnovna ideja ovog projekta je kreiranje aplikacije sposobne da, na osnovu prikupljene kolekcije statusa, odnosno tweet-ova, nauči da prepozna razliku između statusa sa pozitivnim i negativnim osećanjem i na nakon toga uspešno klasifikuje tweet-ove koje joj korisnik zadaje. Trening, odnosno učenje aplikacije se postiže pomoću nenadgledanih metoda mašinskog učenja.
+[Twitter] (https://twitter.com/) je društvena mreža koja korisnicima omogućava da objavljuju i čitaju kratke poruke koji se nazivaju tweet-ovi i koji izražavaju njihovo mišljenje o različitim aspektima života. Osnovna ideja ovog projekta je kreiranje aplikacije sposobne da, na osnovu prikupljene kolekcije statusa, odnosno tweet-ova, nauči da prepozna razliku između statusa sa pozitivnim i negativnim osećanjem i da nakon toga uspešno klasifikuje tweet-ove koje joj korisnik zadaje. Trening, odnosno učenje aplikacije se postiže pomoću nenadgledanih metoda mašinskog učenja.
 U ovom radu izvršena je klasifikacija tweet-ova isključivo na srpskom jeziku, što je i osnovna razlika u odnosu na projekat pod nazivom [Twitter Sentiment Classification using Distant Supervision] (http://s3.eddieoz.com/docs/sentiment_analysis/Twitter_Sentiment_Classification_using_Distant_Supervision.pdf), na kojem je rad zasnovan. 
 
 ##Rešenje
