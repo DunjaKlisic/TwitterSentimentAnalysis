@@ -178,8 +178,8 @@ Preciznost predstavlja procenat statusa koji su stvarno pozitivni od svih status
 | Maximum Entrophy  | 0,642 | 0,178  |
 | Support Vector Machines  | 0,642 | 0,178 |
 
-Nakon treniranja klasifikatora sa različitim metodama mašinskog učenja, uočili smo da sva tri pristupa daju iste rezultate. Preciznost je veća kada se koriste bigrami, u odnosu na odziv koji je bolji kada se koriste unigrami. Kada se koriste unigrami, procenat pravilno klasifikovanih statusa je 60,5% ili 1210 od 2000 instanci. Što se tiče bigrama, ovaj procenat opada na 53,95%.
+Nakon treniranja klasifikatora različitim metodama mašinskog učenja, uočili smo da sva tri pristupa daju iste rezultate. Preciznost je veća kada se koriste bigrami, za razliku od odziva koji je bolji kada se koriste unigrami. Kada se koriste unigrami, procenat pravilno klasifikovanih statusa je 60,5% ili 1210 od 2000 instanci. Što se tiče bigrama, ovaj procenat opada na 53,95%.
 
-U prvom slučaju, najveća greška se javlja kod 535 negativnih tweet-ova koji su klasifikovani kao pozitivni nasuprot 255 pogrešno klasifikovanih pozitivnih statusa. U drugom slučaju, čak 822 pozitivna statusa su klasifikovani kao negativni.
+U prvom slučaju, najveća greška se javlja kod 535 negativnih tweet-ova koji su klasifikovani kao pozitivni nasuprot 255 pogrešno klasifikovanih pozitivnih statusa. U drugom slučaju, čak 822 pozitivna statusa su klasifikovana kao negativni.
 
 Klasifikatorima je prosleđen i status “Ovaj dan se nikada neće završiti :(“ koji su svi ispravno klasifikovali kao negativan.
