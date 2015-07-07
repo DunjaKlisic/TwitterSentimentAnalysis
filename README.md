@@ -84,7 +84,7 @@ U ovom odeljku biće opisan način na koji su realizovani gore navedeni koraci. 
 
 Koristi se [twitter4j](http://twitter4j.org/en/index.html) biblioteka za Javu. To je nezvanična **Java** biblioteka za [Twitter API](https://dev.twitter.com/overview/documentation) koja obezbeđuje jednostavan pristup Twitter-ovim servisima iz **Java** aplikacija. 
 
-Nakon registracije  aplikacije dobijaju se podaci koje je potrebno uključiti u twitter4j.properties fajl koji treba da se nalazi na classpath-u projekta. Obavezan sadržaj ovog fajla dat je nastavku:
+Nakon registracije  aplikacije dobijaju se podaci koje je potrebno uključiti u [twitter4j.properties](https://github.com/DunjaKlisic/TwitterSentimentAnalysis/blob/master/config/twitter4j.properties) fajl koji treba da se nalazi na classpath-u projekta. Obavezan sadržaj ovog fajla dat je nastavku:
 ```
 debug=true
 
@@ -106,7 +106,7 @@ query.setQuery(":)+exclude:retweets");
 
 query.setMaxId(lastID-1);
 ```
-Metoda **setLang("sr")** postavlja parametar koji određuje na kom jeziku će biti statusi iz rezultata upita. Postavljen je na sr jer se vrši klasifikacija tweet-ova na srpskom jeziku.
+Metoda **setLang("sr")** postavlja parametar koji određuje na kom jeziku će biti statusi iz rezultata upita. Postavljen je na **sr** jer se vrši klasifikacija tweet-ova na srpskom jeziku.
 Metodom  **setQuery(":)+exclude:retweets")** postavlja se parametar pretrage i iz rezultata isključuju statusi koji predstavljaju retweet-ove.
 Na kraju, metodom **setMaxId(lastID-1)** zadaje se vrednost parametru maxId.
 Postupak prikupljanja statusa koji izražavaju negativna osećanja je analogan opisanom postuku.
