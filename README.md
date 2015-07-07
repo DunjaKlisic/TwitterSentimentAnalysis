@@ -130,9 +130,9 @@ Za čuvanje podataka korišćena je [gson](https://code.google.com/p/google-gson
 ```
 ###Procesiranje prethodno sačuvanih podataka
 
-Najpre se prethodni podaci učitavaju koristeći metodu **createStatus()** klase **TwitterObjectFactory** koja kao parametra prima json objekat i na osnovu njega kreira instancu klase **Status**. 
+Najpre se prethodni podaci učitavaju koristeći metodu **createStatus()** klase **TwitterObjectFactory** koja kao parametr prima json objekat i na osnovu njega kreira instancu klase **Status**. 
 
-Za obradu statusa, odnosno njihovog teksta, koristi se metoda **replaceAll()** klase **String**. Ona kao prvi parametar prima regularni izraz koji se traži (koji su navedeni u prethodnom odeljku), a kao drugi tekst kojim zamenimo strukturu koja se poklopi sa konkretnim regularnim izrazom. U slučaju emotikona, zamenjuju se praznim String-ovima, korisnička imena tagom USERNAME, a linkove tagom URL. Slova koja se ponavljaju više od dva puta zaredom menjaju se sa dva pojavljivanja istog slova. Primer korišćenja ove metode je:
+Za obradu statusa, odnosno njihovog teksta, koristi se metoda **replaceAll()** klase **String**. Ona kao prvi parametar prima regularni izraz koji se traži (koji su navedeni u prethodnom odeljku), a kao drugi tekst kojim se zameni struktura koja se poklopi sa konkretnim regularnim izrazom. U slučaju emotikona, oni se zamenjuju praznim String-ovima, korisnička imena tagom USERNAME, a linkovi tagom URL. Slova koja se ponavljaju više od dva puta zaredom menjaju se sa dva pojavljivanja istog slova. Primer korišćenja ove metode je:
 ```
 String noUsernames=tweets.get(i).replaceAll("@\\w*", "USERNAME ");
 ```
