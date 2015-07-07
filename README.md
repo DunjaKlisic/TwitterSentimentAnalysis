@@ -46,9 +46,9 @@ Da se u rezultatu ne bi javljali duplikati, koristi se parametar **max_id**. U p
 
 Za upit se postavlja još jedan parametar koji se odnosi na jezik na kojem će biti statusi koji su rezultat pretrage. Taj parametar je **lang** i dodeljuje mu se vrednost **sr** kako bi upit vratio samo tweet-ove na srpskom jeziku. 
 
-U radu je potrebno 1000 negativnih i 1000 pozitivnih statusa, pa se ovaj postupak ponavlja po 10 puta za oba slučaja. Za ovaj rad, bilo je potrebno oko dva meseca za prikupljane ovih podataka.
+U radu je potrebno 1000 negativnih i 1000 pozitivnih statusa, pa se ovaj postupak ponavlja po 10 puta za oba slučaja. Za ovaj rad, bilo je potrebno oko dva meseca za prikupljanje ovih podataka.
 
-Prikupljenei statusi se skladište u json fajlovima [data/positive.json] (https://raw.githubusercontent.com/DunjaKlisic/TwitterSentimentAnalysis/master/data/positive.json) i [data/negative.json](https://raw.githubusercontent.com/DunjaKlisic/TwitterSentimentAnalysis/master/data/negative.json).
+Prikupljeni statusi se skladište u json fajlovima [data/positive.json] (https://raw.githubusercontent.com/DunjaKlisic/TwitterSentimentAnalysis/master/data/positive.json) i [data/negative.json](https://raw.githubusercontent.com/DunjaKlisic/TwitterSentimentAnalysis/master/data/negative.json).
 
 ###Procesiranje prethodno sačuvanih podataka
 
