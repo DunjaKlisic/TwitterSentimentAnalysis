@@ -153,11 +153,11 @@ Najpre se učitava dataset pomoću klase **DataSource** kojoj se u konstruktoru 
 
 Zatim se kreira instanca klase **NGramTokenizer**. Pomoću njene metode **setNGramMaxSize(nGramMaxSize)** bira se da li se radi sa unigramima ili bigramima.
 
-Objektu klase **StringToWordVector** se proseđuje prethodno učitani skup podataka i kreirani tokenizer.
+Objektu klase **StringToWordVector** se prosleđuje prethodno učitani skup podataka i kreirani tokenizer.
 
 Kako bi ostali samo atributi koji su značajni za analizu, koristi se **AttibuteSelectionFilter**, a zatim se kreira **MultiFilter** koji obuhvata ovaj filter i **StringToWordVector** filter.
 
-Zatim se kreira klasifikator sa filterima kojem se prosleđuju ovi filtere i željeni klasifikator (klase **NaiveBayes**, **J48** (Maximum Entropy) ili **LibSVM** (Support Vector Machines)). Trening se vrši pomoću metode **buildClassifier(trainingDataSet)**. Za klasifikaciju nekog konkretnog statusa koristi se metoda **classifyInstance(Instance status)**.	
+Zatim se kreira klasifikator sa filterima kojem se prosleđuju ovi filteri i željeni klasifikator (klase **NaiveBayes**, **J48** (Maximum Entropy) ili **LibSVM** (Support Vector Machines)). Trening se vrši pomoću metode **buildClassifier(trainingDataSet)**. Za klasifikaciju nekog konkretnog statusa koristi se metoda **classifyInstance(Instance status)**.	
 
 ##Analiza
 
