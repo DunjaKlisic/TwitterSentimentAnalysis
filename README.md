@@ -175,7 +175,7 @@ Preciznost predstavlja procenat statusa koji su stvarno pozitivni od svih status
 | klasifikator  | preciznost | odziv |
 | --- | --- | ------------- |
 | Naive Bayes  | 0,642  | 0,178  |
-| Maximum Entrophy  | 0,65 | 0,182  |
+| Maximum Entrophy  | 0,650 | 0,182  |
 | Support Vector Machines  | 0,642 | 0,178 |
 
 Nakon treniranja klasifikatora različitim metodama mašinskog učenja, uočili smo da Naive Bayes i Support Vector Machines klasifikatori daju iste rezultate, dok korišćenje Maximum Entrophy klasifikatora dovodi do malo veće preciznosti i malo većeg odziva. Preciznost je veća kada se koriste bigrami, za razliku od odziva koji je bolji kada se koriste unigrami. Kada se koriste Naive Bayes ili Support Vector Machines i unigrami, procenat pravilno klasifikovanih statusa je 60,5% ili 1210 od 2000 instanci. Što se tiče bigrama, ovaj procenat opada na 53,95%. Kod Maximum Entrophy klasifikatora, sa unigramima ovaj procenat iznosi 61,3%, a sa bigramima 54,2%.
