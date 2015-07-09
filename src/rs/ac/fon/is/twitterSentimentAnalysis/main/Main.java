@@ -24,6 +24,7 @@ import twitter4j.TwitterStreamFactory;
 import weka.classifiers.Classifier;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.functions.LibSVM;
+import weka.classifiers.functions.Logistic;
 import weka.classifiers.trees.J48;
 
 public class Main {
@@ -79,14 +80,14 @@ public class Main {
 			
 			System.out.println("-------------------------------------------------");
 			System.out.println("Maximum entropy, unigrami:");
-			sa.buildClassifier(new J48(), "data/trainingDataSet.arff", 1);
+			sa.buildClassifier(new Logistic(), "data/trainingDataSet.arff", 1);
 			sa.classifyATweet("Ovaj dan se nikada nece zavrsiti :(");
 			
 			
 			
 			System.out.println("-------------------------------------------------");
 			System.out.println("Maximum entropy, bigrami:");
-			sa.buildClassifier(new J48(), "data/trainingDataSet.arff", 2);
+			sa.buildClassifier(new Logistic(), "data/trainingDataSet.arff", 2);
 			sa.classifyATweet("Ovaj dan se nikada nece zavrsiti :(");
 			
 			
